@@ -29,6 +29,7 @@ vec3 L_i_directional(vec3 x, vec3 omega_i) {
 }
 
 // fresnel effect
+// brought to you by https://godotshaders.com/snippet/fresnel/
 float fresnel(float power, vec3 n, vec3 omega_o) {
     return pow(1.0 - clamp(dot(n, omega_o), 0.0, 1.0), power);
 }
